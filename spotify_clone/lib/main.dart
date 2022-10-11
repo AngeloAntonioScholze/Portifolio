@@ -13,9 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Spotify Clone',
-      theme: ThemeData(),
-      home: const MyHomePage(title: 'Spotify Clone'),
-      routes: {},
+      theme: ThemeData(
+        textTheme: const TextTheme(),
+      ),
+      home: MyHomePage(),
     );
   }
 }
