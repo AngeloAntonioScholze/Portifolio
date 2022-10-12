@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/home_app_bar.dart';
+import '../widgets/home_tags_row.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage();
