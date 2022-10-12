@@ -24,8 +24,8 @@ class ConfigurationButton extends StatelessWidget {
       padding: EdgeInsets.zero,
       onPressed: () {},
       icon: const Icon(
-        Icons.settings_applications_sharp,
-        size: 32,
+        FontAwesomeIcons.gear,
+        size: 24,
       ),
       color: Colors.white,
     );
@@ -42,7 +42,7 @@ class RecentButton extends StatelessWidget {
       onPressed: () {},
       icon: const Icon(
         Icons.av_timer,
-        size: 32,
+        size: 30,
       ),
       color: Colors.white,
     );
