@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../widgets/home_app_bar.dart';
 import '../widgets/home_tags_row.dart';
+import '../widgets/main_screen_body.dart';
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -27,9 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ];
           },
-          body: Center(
-            child: Text('teste'),
-          ),
+          body: const MainScreenBody(),
         ),
       ),
     );
