@@ -10,7 +10,7 @@ class MainScreenBottomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        color: Color.fromRGBO(18, 18, 18, 1.0),
+        color: Color.fromARGB(0, 0, 0, 0),
       ),
       height: 64,
       child: Row(
