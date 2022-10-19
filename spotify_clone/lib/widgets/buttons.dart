@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:spotify_clone/widgets/custom_icons_icons.dart';
 
 class NotificationButton extends StatelessWidget {
   const NotificationButton({Key? key}) : super(key: key);
@@ -24,8 +25,8 @@ class ConfigurationButton extends StatelessWidget {
       padding: EdgeInsets.zero,
       onPressed: () {},
       icon: const Icon(
-        FontAwesomeIcons.gear,
-        size: 24,
+        CustomIcons.cogOutline,
+        size: 26,
       ),
       color: Colors.white,
     );

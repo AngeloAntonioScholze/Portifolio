@@ -88,14 +88,20 @@ flutter:
         #- asset: assets/fonts/Gotham-Spotify-Font/Gotham-XlightItalic.otf
         - asset: assets/fonts/Gotham-Spotify-Font/GothamBold.ttf
         - asset: assets/fonts/Gotham-Spotify-Font/GothamBoldItalic.ttf
+          style: italic
         - asset: assets/fonts/Gotham-Spotify-Font/GothamBook.ttf
         - asset: assets/fonts/Gotham-Spotify-Font/GothamBookItalic.ttf
+          style: italic
         - asset: assets/fonts/Gotham-Spotify-Font/GothamLight.ttf
         - asset: assets/fonts/Gotham-Spotify-Font/GothamLightItalic.ttf
+          style: italic
         - asset: assets/fonts/Gotham-Spotify-Font/GothamMedium_1.ttf
         - asset: assets/fonts/Gotham-Spotify-Font/GothamMedium.ttf
         - asset: assets/fonts/Gotham-Spotify-Font/GothamMediumItalic.ttf
-
+          style: italic
+    - family:  CustomIcons
+      fonts:
+       - asset: assets/fonts/CustomIcons.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
