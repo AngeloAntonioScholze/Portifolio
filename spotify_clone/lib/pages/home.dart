@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../widgets/home_app_bar.dart';
 import '../widgets/home_tags_row.dart';
 import '../widgets/main_screen_body.dart';
+import '../widgets/main_screen_bottom_app_bar.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -30,6 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
           },
           body: const MainScreenBody(),
         ),
+        bottomNavigationBar: const MainScreenBottomAppBar(),
       ),
     );
   }
