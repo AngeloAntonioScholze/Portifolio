@@ -18,11 +18,9 @@ class MainScreenGrid extends StatelessWidget {
     List<Widget> _cards = [];
     for (int i = 0; i < 6; i++) {
       _cards.add(
-        SizedBox(
-          child: Card(
-            color: Colors.red,
-            child: Container(),
-          ),
+        Card(
+          color: Colors.red,
+          child: Container(),
         ),
       );
     }

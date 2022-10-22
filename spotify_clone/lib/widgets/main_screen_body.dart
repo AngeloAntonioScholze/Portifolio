@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'content_row.dart';
 import 'main_screen_grid.dart';
 
 class MainScreenBody extends StatelessWidget {
@@ -9,18 +10,19 @@ class MainScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DecoratedBox(
-      decoration: const BoxDecoration(
+    return const DecoratedBox(
+      decoration: BoxDecoration(
         color: Color.fromRGBO(18, 18, 18, 1.0),
       ),
       child: CustomScrollView(
         slivers: [
-          const MainScreenGrid(),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (context, index) {},
-            ),
-          )
+          MainScreenGrid(),
+          ContentRow(),
+          ContentRow(),
+          ContentRow(),
+          ContentRow(),
+          ContentRow(),
+          ContentRow(),
         ],
       ),
     );
