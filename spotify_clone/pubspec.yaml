@@ -86,18 +86,27 @@ flutter:
         #- asset: assets/fonts/Gotham-Spotify-Font/Gotham-UltraItalic.otf
         #- asset: assets/fonts/Gotham-Spotify-Font/Gotham-XLight.otf
         #- asset: assets/fonts/Gotham-Spotify-Font/Gotham-XlightItalic.otf
-        - asset: assets/fonts/Gotham-Spotify-Font/GothamBold.ttf
-        - asset: assets/fonts/Gotham-Spotify-Font/GothamBoldItalic.ttf
-          style: italic
-        - asset: assets/fonts/Gotham-Spotify-Font/GothamBook.ttf
-        - asset: assets/fonts/Gotham-Spotify-Font/GothamBookItalic.ttf
-          style: italic
+        
         - asset: assets/fonts/Gotham-Spotify-Font/GothamLight.ttf
+          weight: 300
         - asset: assets/fonts/Gotham-Spotify-Font/GothamLightItalic.ttf
+          weight: 300
           style: italic
         - asset: assets/fonts/Gotham-Spotify-Font/GothamMedium_1.ttf
         - asset: assets/fonts/Gotham-Spotify-Font/GothamMedium.ttf
+          weight: 400
         - asset: assets/fonts/Gotham-Spotify-Font/GothamMediumItalic.ttf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/Gotham-Spotify-Font/GothamBook.ttf
+          weight: 500
+        - asset: assets/fonts/Gotham-Spotify-Font/GothamBookItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/Gotham-Spotify-Font/GothamBold.ttf
+          weight: 700
+        - asset: assets/fonts/Gotham-Spotify-Font/GothamBoldItalic.ttf
+          weight: 700
           style: italic
     - family:  CustomIcons
       fonts:

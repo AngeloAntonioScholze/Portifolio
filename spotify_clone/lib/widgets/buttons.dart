@@ -9,24 +9,10 @@ class NotificationButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       padding: EdgeInsets.zero,
-      onPressed: () {},
-      icon: const Icon(FontAwesomeIcons.bell),
-      color: Colors.white,
-    );
-  }
-}
-
-class ConfigurationButton extends StatelessWidget {
-  const ConfigurationButton({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return IconButton(
-      padding: EdgeInsets.zero,
+      constraints: const BoxConstraints(),
       onPressed: () {},
       icon: const Icon(
-        CustomIcons.cogOutline,
-        size: 26,
+        FontAwesomeIcons.bell,
       ),
       color: Colors.white,
     );
@@ -40,10 +26,27 @@ class RecentButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       padding: EdgeInsets.zero,
+      constraints: const BoxConstraints(),
       onPressed: () {},
       icon: const Icon(
         Icons.av_timer,
-        size: 30,
+      ),
+      color: Colors.white,
+    );
+  }
+}
+
+class ConfigurationButton extends StatelessWidget {
+  const ConfigurationButton({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      padding: EdgeInsets.zero,
+      constraints: const BoxConstraints(),
+      onPressed: () {},
+      icon: const Icon(
+        CustomIcons.cogOutline,
       ),
       color: Colors.white,
     );
@@ -60,7 +63,6 @@ class SearchButton extends StatelessWidget {
       onPressed: () {},
       icon: const Icon(
         Icons.search,
-        size: 36,
       ),
       color: Colors.white,
     );
@@ -77,7 +79,6 @@ class HomeButton extends StatelessWidget {
       onPressed: () {},
       icon: const Icon(
         Icons.home,
-        size: 36,
       ),
       color: Colors.white,
     );

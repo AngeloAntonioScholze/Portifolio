@@ -10,11 +10,12 @@ class MainScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const DecoratedBox(
-      decoration: BoxDecoration(
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      decoration: const BoxDecoration(
         color: Color.fromRGBO(18, 18, 18, 1.0),
       ),
-      child: CustomScrollView(
+      child: const CustomScrollView(
         slivers: [
           MainScreenGrid(),
           ContentRow(),

@@ -5,7 +5,7 @@ class HomeAppBar extends SliverPersistentHeaderDelegate {
   HomeAppBar();
 
   final double minHeight = 0.0;
-  final double maxHeight = 64.0;
+  final double maxHeight = 80.0;
 
   @override
   double get minExtent => minHeight;
@@ -18,16 +18,18 @@ class HomeAppBar extends SliverPersistentHeaderDelegate {
     return Stack(
       fit: StackFit.expand,
       children: [
-        Container(
-          decoration: const BoxDecoration(
-            color: Color.fromRGBO(18, 18, 18, 1),
+        Positioned.fill(
+          child: Container(
+            decoration: const BoxDecoration(
+              color: Color.fromRGBO(18, 18, 18, 1),
+            ),
           ),
         ),
         Positioned(
           width: MediaQuery.of(context).size.width,
           bottom: 0,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -58,16 +60,15 @@ class HomeAppBar extends SliverPersistentHeaderDelegate {
   }
 
   Widget _buildAction() {
-    return Container(
-      margin: const EdgeInsets.only(bottom: 0),
-      child: Align(
-        child: Wrap(
-          children: const [
-            NotificationButton(),
-            RecentButton(),
-            ConfigurationButton(),
-          ],
-        ),
+    return SizedBox(
+      child: Wrap(
+        alignment: WrapAlignment.spaceBetween,
+        spacing: 15,
+        children: const [
+          NotificationButton(),
+          RecentButton(),
+          ConfigurationButton(),
+        ],
       ),
     );
   }
