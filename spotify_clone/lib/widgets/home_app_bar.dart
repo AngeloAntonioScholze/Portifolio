@@ -5,7 +5,7 @@ class HomeAppBar extends SliverPersistentHeaderDelegate {
   HomeAppBar();
 
   final double minHeight = 0.0;
-  final double maxHeight = 80.0;
+  final double maxHeight = 96.0;
 
   @override
   double get minExtent => minHeight;
@@ -21,15 +21,16 @@ class HomeAppBar extends SliverPersistentHeaderDelegate {
         Positioned.fill(
           child: Container(
             decoration: const BoxDecoration(
-              color: Color.fromRGBO(18, 18, 18, 1),
+              color: Colors.lightGreen, // Color.fromRGBO(18, 18, 18, 1),
             ),
           ),
         ),
         Positioned(
           width: MediaQuery.of(context).size.width,
-          bottom: 0,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15),
+          bottom: 10,
+          child: Container(
+            color: Colors.blueGrey,
+            padding: const EdgeInsets.symmetric(horizontal: 21),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -44,18 +45,15 @@ class HomeAppBar extends SliverPersistentHeaderDelegate {
   }
 
   Widget _buildGreetingMessage() {
-    return Container(
-      alignment: Alignment.center,
-      child: const Text(
-        'Boa noite',
-        style: TextStyle(
-          color: Colors.white,
-          fontFamily: 'Spotify',
-          fontSize: 22,
-          fontWeight: FontWeight.bold,
-        ),
-        textAlign: TextAlign.center,
+    return const Text(
+      'Boa noite',
+      style: TextStyle(
+        color: Colors.white,
+        fontFamily: 'Spotify',
+        fontSize: 22,
+        fontWeight: FontWeight.w700,
       ),
+      textAlign: TextAlign.center,
     );
   }
 
