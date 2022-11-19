@@ -2,4 +2,50 @@ body {
     display: grid;
     align-items: center;
     justify-content: center;
+    height: 96vh;
+    width: 96vw;
+    background-color: #2a2356;
+}
+
+#DarkMdBtt {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    height: 50px;
+    width: 50px;
+    background-color: black;
+}
+
+.seconds {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+}
+
+.minutes {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+}
+
+.hours {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+
 }
