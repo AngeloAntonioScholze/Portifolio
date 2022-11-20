@@ -14,7 +14,7 @@ class Suit {
   }
 
   Suit._(this.value, this.label, double x, double y, double w, double h)
-      : sprite = solitaireSprite(x, y, w, h);
+      : sprite = getSprite(x, y, w, h);
 
   static late final List<Suit> _singletons = [
     Suit._(0, '♥', 1176, 17, 172, 183),

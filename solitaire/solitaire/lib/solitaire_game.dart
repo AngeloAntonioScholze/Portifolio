@@ -52,12 +52,12 @@ class SolitaireGame extends FlameGame {
       ..viewfinder.anchor = Anchor.topCenter;
     add(camera);
   }
+}
 
-  Sprite solitaireSprite(double x, double y, double width, double height) {
-    return Sprite(
-      Flame.images.fromCache('klondike-sprites.png'),
-      srcPosition: Vector2(x, y),
-      srcSize: Vector2(width, height),
-    );
-  }
+Sprite getSprite(double x, double y, double width, double height) {
+  return Sprite(
+    Flame.images.fromCache('klondike-sprites.png'),
+    srcPosition: Vector2(x, y),
+    srcSize: Vector2(width, height),
+  );
 }
