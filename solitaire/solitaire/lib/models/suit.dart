@@ -9,7 +9,10 @@ class Suit {
   final Sprite sprite;
 
   factory Suit.fromInt(int index) {
-    assert(index >= 0 && index <= 3);
+    assert(
+      index >= 0 && index <= 3,
+      'index is outside of the bounds of what a suit can be',
+    );
     return _singletons[index];
   }
 

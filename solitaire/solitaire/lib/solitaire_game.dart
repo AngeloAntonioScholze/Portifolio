@@ -1,12 +1,15 @@
+import 'dart:math';
+
 import 'package:flame/components.dart';
 import 'package:flame/experimental.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
 import 'package:solitaire/components/foundation.dart';
-import 'package:solitaire/components/stock.dart';
+import 'package:solitaire/components/stock_pile.dart';
 import 'package:solitaire/components/waste.dart';
 
 import 'components/pile.dart';
+import 'models/card.dart';
 
 class SolitaireGame extends FlameGame {
   static const double cardWidth = 1000.0;
@@ -17,19 +20,24 @@ class SolitaireGame extends FlameGame {
 
   @override
   Future<void> onLoad() async {
+    //load sprite sheet
     await Flame.images.load('klondike-sprites.png');
-    final stock = Stock()
+    //creates the stockpile
+    final stockPile = StockPile()
       ..size = cardSize
       ..position = Vector2(cardGap, cardGap);
+    //create the wastepile
     final waste = Waste()
       ..size = cardSize
       ..position = Vector2(cardWidth + 2 * cardGap, cardGap);
+    //creates all the 4 foundationpiles(endpiles)
     final foundations = List.generate(
         4,
         (i) => Foundation()
           ..size = cardSize
           ..position =
               Vector2((i + 3) * (cardWidth + cardGap) + cardGap, cardGap));
+    //creates all the tablepiles
     final piles = List.generate(
       7,
       (i) => Pile()
@@ -39,18 +47,28 @@ class SolitaireGame extends FlameGame {
           cardHeight + 2 * cardGap,
         ),
     );
+    //creates the whole scope of the game (world)
     final world = World()
-      ..add(stock)
+      ..add(stockPile)
       ..add(waste)
       ..addAll(foundations)
       ..addAll(piles);
     add(world);
+    //creates a camera looking at the game world, this one look at the whole table
     final camera = CameraComponent(world: world)
       ..viewfinder.visibleGameSize =
           Vector2(cardWidth * 7 + cardGap * 8, 4 * cardHeight + 3 * cardGap)
       ..viewfinder.position = Vector2(cardWidth * 3.5 + cardGap * 4, 0)
       ..viewfinder.anchor = Anchor.topCenter;
     add(camera);
+
+    //adding cards to game
+    final cards = [
+      for (int rank = 1; rank <= 13; rank++)
+        for (int suit = 0; suit < 4; suit++) Card(rank, suit)
+    ];
+    world.addAll(cards);
+    cards.forEach(stockPile.getCards);
   }
 }
 

@@ -1,5 +1,4 @@
 import 'package:flame/components.dart';
-import 'package:flame/flame.dart';
 import 'package:flutter/foundation.dart';
 import 'package:solitaire/solitaire_game.dart';
 
@@ -10,8 +9,11 @@ class FaceNumber {
   final Sprite redSprite;
   final Sprite blackSprite;
 
-  factory FaceNumber.of(int value) {
-    assert(value >= 1 && value <= 13);
+  factory FaceNumber.fromInt(int value) {
+    assert(
+      value >= 1 && value <= 13,
+      'value is outside of the bounds of what a rank can be',
+    );
     return _singletons[value - 1];
   }
 
